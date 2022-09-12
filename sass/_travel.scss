@@ -1,0 +1,55 @@
+.travel {
+   @include size($h, $w);
+
+   &_wrapper {
+      @include size($h, $w);
+      border-left: 15px solid $color_w;
+      border-right: 15px solid $color_w;
+      @include display($df, $jc, $ai);
+      flex-direction: column;
+   }
+
+   &_background {
+      @include size($h, $w);
+      background: url(../img/main_section_3.jpg) center center no-repeat;
+      background-size: cover;
+      @include display($df, $jc, $ai);
+   }
+
+
+&_title{
+   font-size: 36px;
+line-height: 26px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Aleo";
+text-align: center;
+}
+.name_autor{
+   font-size: 20px;
+line-height: 26px;
+text-transform: uppercase;
+color: #fefefe;
+font-family: "Josefin Sans";
+border: 2px solid rgb(173, 4, 151);
+}
+
+.quote{
+   border: 2px solid rgb(4, 173, 60);
+
+   &_marks{
+
+ .svg_purple{
+   @include size(36px, auto);
+   filter: invert(37%) sepia(74%) saturate(2026%) hue-rotate(216deg) brightness(102%) contrast(98%);
+   border: 5px solid rgb(175, 170, 192);
+   float:left; 
+margin: 7px 7px 7px 0;
+ }
+
+   }
+&_text{
+@include font(16px, $ff, 400, 0, 26px, $color_w);
+}
+}
+}

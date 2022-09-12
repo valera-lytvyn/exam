@@ -1,0 +1,64 @@
+.we_do {
+   // @include size($h, $w);
+border: 2px solid orangered;
+
+   &_wrapper {
+      @include size($h, $w);
+      border-left: 15px solid $color_w;
+      border-right: 15px solid $color_w;
+      @include display($df, $jc, $ai);
+      flex-direction: column;
+
+   }
+
+   &_part_1 {
+      @include size($h, $w);
+           background: url(../img/main_section_1.jpg) center center no-repeat;
+      background-size: cover;
+           }
+
+   .black_wrap {
+      background: #232323;
+      opacity: .8;
+      height: 52.86%;
+      margin-bottom:  14.29% ;
+
+      .black {
+         margin: 0px 75px 0px 30px;
+         border: 1px solid transparent;
+
+         .name_country {
+            @include font(20px, $ff, 400, 2px, 26px, $color_e8);
+            margin-top: 55px;
+         }
+
+         .name_hotel {
+            @include font(20px, $ff, 400, 0px, 26px, $color_e8);
+            text-transform: uppercase;
+            margin: 30px 0;
+         }
+
+         .description {
+            @include font(16px, $ff, 400, 0px, 26px, $color_e8);
+            margin-bottom: 40px
+         }
+
+         .we_do_button {
+            @include size(60px, 225px);
+            background-color: $color_f;
+            @include font(16px, $ff_a, 400, 1px, 60px, $color_w);
+            text-transform: uppercase;
+            text-align: center;
+            margin: 10px 0 40px;
+         }
+      }
+   }
+
+   &_part_2 {
+      @include size($h, $w);
+      background: url(../img/main_section_2.jpg) center center no-repeat;
+      background-size: cover;
+      @include display($df, $jc, flex-end);
+   }
+
+}

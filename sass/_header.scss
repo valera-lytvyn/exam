@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+.header {
+   @include size($h, $w);
+   border-left: 15px solid $color_w;
+   border-top: 15px solid $color_w;
+   border-right: 15px solid $color_w;
+   @include display($df, $jc, $ai);
+   flex-direction: column;
+
+
+   &_background {
+      @include size($h, $w);
+      background: url(../img/header_background.jpg) center center no-repeat;
+      background-size: cover;
+
+      @include display($df, $jc, $ai);
+
+
+      .header_title {
+         @include font(48px, $ff, 700, 5px, 48px, $color_w);
+         text-transform: uppercase;
+         text-align: center;
+      }
+
+      .header_text {
+         @include font(22px, $ff, 400, 7px, 26px, $color_w);
+         text-align: center;
+      }
+
+      .header_search {
+         margin-top: 55px;
+         height: 60px;
+         border: 2px solid $color_w;
+         @include display($df, $jc, $ai);
+
+         .search_input_wrap {
+            @include size($h, 76.92%);
+
+
+            .search_input {
+               @include size($h, $w);
+               @include font(14px, $ff, 400px, 3px, 26px, #999999);
+               text-align: center;
+               border: 5px solid $color_w;
+
+               placeholder {
+                  border: none;
+               }
+            }
+         }
+
+         .search_button_wrap {
+            @include size($h, 23.08%);
+            @include display($df, $jc, $ai);
+            background: $color_f;
+
+            .button {
+               @include font(14px, $ff_a, 400, 1px, 26px, $color_w);
+               margin: 0 5% 0 10%;
+               text-transform: uppercase;
+               text-align: center;
+            }
+
+            .search_logo {
+               margin: 0 5%;
+
+               .svg_white {
+                  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(123deg) brightness(103%) contrast(102%);
+               }
+            }
+         }
+
+
+         .scroll {
+            margin-top: 120px;
+            @include font(14px, $ff, 400, 3px, 26px, $color_w);
+            text-align: center;
+
+            .scroll_logo {
+               rotate: -90deg;
+               filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(123deg) brightness(103%) contrast(102%);
+
+            }
+         }
+      }
+   }
+
+   .navbar_wrap {
+      @include size(80px, $w);
+      background-color: $color_f;
+
+
+      .navbar-brand {
+         @include font(24px, $ff, 700, 2px, 26px, $color_w);
+         text-transform: uppercase;
+      }
+
+      .nav-item {
+         @include font(14px, $ff_a, 400, 0, 26px, $color_w);
+         text-transform: uppercase;
+      }
+   }
+}

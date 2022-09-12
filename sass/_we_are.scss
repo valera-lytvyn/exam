@@ -1,0 +1,120 @@
+.we_are {
+   @include size($h, $w);
+
+   &_wrapper {
+      @include size($h, $w);
+      border-left: 15px solid $color_w;
+      border-right: 15px solid $color_w;
+      @include display($df, $jc, $ai);
+      flex-direction: column;
+   }
+
+   &_background {
+      @include size($h, $w);
+      background: url(../img/choose_background.jpg) center center no-repeat;
+      background-size: cover;
+      @include display($df, $jc, $ai);
+   }
+
+   &_title {
+      @include font(36px, $ff_a, 400, 0, 26px, $color_w);
+
+   }
+
+   &_text {
+      @include font(16px, $ff, 400, 2px, 26px, $color_e8);
+      margin-top: 65px;
+
+      p:nth-child(2) {
+         margin: 40px 0;
+      }
+   }
+
+   &_button {
+      @include size(60px, 225px);
+      background-color: $color_f;
+      @include font(16px, $ff_a, 400, 1px, 60px, $color_w);
+      text-transform: uppercase;
+      text-align: center;
+      margin: 10px 0;
+   }
+
+   &_pic_1 {
+      margin-left: 65px;
+      margin-bottom: 5px;
+   }
+
+   &_logotype {
+      @include size(335px, $w);
+      position: relative;
+
+      .hide_circle {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         background: $color_33;
+         z-index: 18;
+         @include size(180px, $w);
+      }
+
+      .circle_wrap {
+         position: absolute;
+         width: 100%;
+         @include display($df, $jc, $ai);
+         top: 20px;
+         left: 0;
+
+         .circle {
+            @include size(200px, 450px);
+            border: dotted #747474 2px;
+            border-radius: 50%;
+            position: relative;
+
+
+         }
+      }
+
+      &_background {
+         @include size($h, $w);
+         background: $color_33;
+         @include display($df, $jc, $ai);
+      }
+
+   }
+
+   .logotype {
+      @include display($df, $jc, $ai);
+      flex-direction: column;
+      position: relative;
+      z-index: 20;
+   }
+
+   &_logo {
+      @include size(60px, 60px);
+
+
+      img {
+         @include size($h, $w);
+      }
+
+      .svg_purple {
+         filter: invert(37%) sepia(74%) saturate(2026%) hue-rotate(216deg) brightness(102%) contrast(98%);
+      }
+
+      .svg_red {
+         filter: invert(57%) sepia(25%) saturate(5883%) hue-rotate(324deg) brightness(111%) contrast(125%);
+      }
+
+      .svg_blue {
+         filter: invert(49%) sepia(99%) saturate(2655%) hue-rotate(175deg) brightness(100%) contrast(103%);
+      }
+
+      &_text {
+         @include font(36px, $ff_a, 400, 0, 26px, $color_e8);
+
+         text-align: center;
+         margin-top: 40px;
+
+      }
+   }
+}
