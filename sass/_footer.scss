@@ -1,0 +1,72 @@
+.footer {
+    @include size(285px, $w);
+
+    &_wrapper {
+        @include size($h, $w);
+        border-left: 15px solid $color_w;
+        border-right: 15px solid $color_w;
+        border-bottom: 15px solid $color_w;
+        flex-direction: column;
+    }
+
+    &_background {
+        @include size($h, $w);
+        background: $color_23;
+        @include display($df, $jc, flex-end);
+    }
+
+    &_title {
+        @include font(24px, $ff, 700, 3px, 30px, $color_w);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &_text {
+        @include font(16px, $ff, 100, 2px, 26px, $color_w);
+        text-align: center;
+    }
+
+    .sprite {
+        background-image: url(../img/logo/spritesheet.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+
+    .facebook {
+        width: 9px;
+        height: 16px;
+        background-position: -25px -25px;
+    }
+
+    .twitter {
+        width: 15px;
+        height: 12px;
+        background-position: -84px -25px;
+    }
+
+    .insocial {
+        width: 15px;
+        height: 14px;
+        background-position: -149px -25px;
+    }
+
+    .youtube {
+        width: 17px;
+        height: 12px;
+        background-position: -214px -25px;
+    }
+
+    .pinterest {
+        width: 14px;
+        height: 14px;
+        background-position: -281px -25px;
+    }
+
+}
+
+@media (max-width:768px) {
+    .footer {
+        @include size(185px, $w);
+
+    }
+}

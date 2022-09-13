@@ -1,5 +1,4 @@
 .we_are {
-   @include size($h, $w);
 
    &_wrapper {
       @include size($h, $w);
@@ -13,21 +12,16 @@
       @include size($h, $w);
       background: url(../img/choose_background.jpg) center center no-repeat;
       background-size: cover;
+      min-height: 685px;
       @include display($df, $jc, $ai);
    }
 
    &_title {
       @include font(36px, $ff_a, 400, 0, 26px, $color_w);
-
    }
 
    &_text {
       @include font(16px, $ff, 400, 2px, 26px, $color_e8);
-      margin-top: 65px;
-
-      p:nth-child(2) {
-         margin: 40px 0;
-      }
    }
 
    &_button {
@@ -37,11 +31,14 @@
       text-transform: uppercase;
       text-align: center;
       margin: 10px 0;
+
+      &:hover {
+         box-shadow: 2px 1px 5px 1px $color_w;
+      }
    }
 
-   &_pic_1 {
-      margin-left: 65px;
-      margin-bottom: 5px;
+   &_pic img {
+      @include size($h, $w);
    }
 
    &_logotype {
@@ -50,11 +47,35 @@
 
       .hide_circle {
          position: absolute;
-         bottom: 0;
+         bottom: 0px;
          left: 0;
          background: $color_33;
          z-index: 18;
-         @include size(180px, $w);
+         @include size(230px, $w);
+      }
+
+      @media (max-width:1200px) {
+         .hide_circle {
+            @include size(190px, $w);
+         }
+      }
+
+      @media (max-width:767px) {
+         .hide_circle {
+            display: none;
+         }
+      }
+
+      @media (max-width:1200px) {
+         & {
+            @include size(250px, $w);
+         }
+      }
+
+      @media (max-width:767px) {
+         & {
+            @include size(120px, $w);
+         }
       }
 
       .circle_wrap {
@@ -70,7 +91,25 @@
             border-radius: 50%;
             position: relative;
 
+         }
 
+         @media (max-width:1440px) {
+            .circle {
+               @include size(250px, 400px);
+            }
+         }
+
+         @media (max-width:1200px) {
+            .circle {
+               @include size(100px, 300px);
+            }
+         }
+
+         @media (max-width:992px) {
+            .circle {
+               @include size(190px, 230px);
+               margin: 0 10px
+            }
          }
       }
 
@@ -95,6 +134,11 @@
 
       img {
          @include size($h, $w);
+
+         &:hover {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(63deg) brightness(104%) contrast(104%);
+         }
+
       }
 
       .svg_purple {
@@ -111,10 +155,41 @@
 
       &_text {
          @include font(36px, $ff_a, 400, 0, 26px, $color_e8);
-
          text-align: center;
          margin-top: 40px;
+      }
 
+
+      @media (max-width:992px) {
+         &_text {
+            @include font(26px, $ff_a, 400, 0, 26px, $color_e8);
+         }
+      }
+
+      @media (max-width:768px) {
+         &_text {
+            @include font(20px, $ff_a, 400, 0, 26px, $color_e8);
+            margin-top: 20px;
+         }
+      }
+
+      @media (max-width:576px) {
+         &_text {
+            @include font(18px, $ff_a, 400, 0, 26px, $color_e8);
+            margin-top: 10px;
+         }
+      }
+   }
+
+   @media (max-width:768px) {
+      &_logo {
+         @include size(30px, 30px);
+      }
+   }
+
+   @media (max-width:576px) {
+      &_title {
+         @include font(26px, $ff_a, 400, 0, 26px, $color_w);
       }
    }
 }

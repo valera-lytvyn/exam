@@ -17,39 +17,65 @@
    }
 
 
-&_title{
-   font-size: 36px;
-line-height: 26px;
-color: #ffffff;
-font-weight: 400;
-font-family: "Aleo";
-text-align: center;
-}
-.name_autor{
-   font-size: 20px;
-line-height: 26px;
-text-transform: uppercase;
-color: #fefefe;
-font-family: "Josefin Sans";
-border: 2px solid rgb(173, 4, 151);
-}
+   &_title {
+      @include font(36px, $ff_a, 400, 0, 26px, $color_w);
+      text-align: center;
+      margin: 17.8% 0 13.7%;
+   }
 
-.quote{
-   border: 2px solid rgb(4, 173, 60);
+   @media (max-width:768px) {
+      &_title {
+         margin: 5% auto;
+      }
+   }
 
-   &_marks{
+   @media (max-width:576px) {
 
- .svg_purple{
-   @include size(36px, auto);
-   filter: invert(37%) sepia(74%) saturate(2026%) hue-rotate(216deg) brightness(102%) contrast(98%);
-   border: 5px solid rgb(175, 170, 192);
-   float:left; 
-margin: 7px 7px 7px 0;
- }
+      &_title {
+         @include font(26px, $ff_a, 400, 0, 26px, $color_w);
+      }
+   }
+
+   &_pic {
+      @include size(auto, $w);
 
    }
-&_text{
-@include font(16px, $ff, 400, 0, 26px, $color_w);
+
+   .name_autor {
+      @include font(20px, $ff, 400, 0, 26px, $color_fe);
+      text-transform: uppercase;
+      margin: 50px 30px;
+   }
+
+   .quote {
+
+      &_marks {
+
+         .svg_purple {
+            @include size(36px, auto);
+            filter: invert(37%) sepia(74%) saturate(2026%) hue-rotate(216deg) brightness(102%) contrast(98%);
+            float: left;
+            margin: -30px 10px 10px 30px;
+         }
+
+      }
+
+      &_text {
+         margin: 0 50px 0 30px;
+         @include font(16px, $ff, 400, 0, 26px, $color_w);
+      }
+   }
+
+   @media (max-width:1200px) {
+      .name_autor {
+         margin: 10px 30px 30px;
+      }
+   }
+
 }
-}
+
+@media (max-width:768px) {
+   .travel {
+      max-height: 500px;
+   }
 }
